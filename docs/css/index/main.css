@@ -1,0 +1,72 @@
+/*The main css file for the general shape of the index. */
+
+.tooltip {
+    visibility: hidden;
+    width: 120px;
+    background-color: white;
+    line-height: 20px;
+    font-size: 21px;
+    color: black;
+    text-align: center;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    outline: #fff solid 3px;
+    border:2px solid black;
+    transition:0.2s
+}
+
+:root {
+    --container:calc(180px * 4)
+}
+#container {
+    display:grid;
+    grid-template-areas:
+    "header header header"
+    "nav nav nav"
+    "section section aside"
+    ;
+}
+nav {
+    display:flex;
+    gap:7px;
+    grid-area:nav;
+    margin-top:50px
+}
+nav a {
+    border:5px solid black;
+    padding:5px;
+    height:190px;
+    width:180px;
+    position:relative;
+    transition:0.2s margin-top;
+    border-radius:2px
+}
+nav a h1 {
+    position:absolute;
+    bottom:0px;
+    right:10px;
+    font-size:25px
+}
+nav a:nth-child(even) {
+    transform:skewY(-20deg);
+
+}
+nav a:nth-child(odd) {
+    transform:skewY(20deg);
+}
+nav a:hover {
+    margin-top:-30px;
+}
+section {
+    grid-area:section;
+    border:5px solid black;
+    padding:1em;
+    width:400px;
+    margin-top:40px
+}
+aside {
+    grid-area:aside;
+    width:320px;
+    margin-top:40px;
+}

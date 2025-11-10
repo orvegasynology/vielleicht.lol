@@ -1,0 +1,10 @@
+@media only screen and (max-width: 500px) {
+    nav {
+        flex-wrap: wrap;
+    }
+nav a:nth-child(odd), nav a:nth-child(even) {
+    transform:none;
+    width:50%;
+    height:50%
+    }
+}

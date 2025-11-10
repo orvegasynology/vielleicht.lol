@@ -1,0 +1,72 @@
+/*The main css file for the designing and color of the index. */
+
+body {
+    background-color:#f78b50
+}
+
+/*top navigation*/
+nav a:nth-child(1) {
+    background-color:#98cdf3;
+    border:5px solid #4c72c3;
+    animation-delay: 0.5s
+}
+nav a:nth-child(1) h1 {
+    color:#4c72c3;
+    -webkit-text-stroke: 5px #b4d7f8;
+}
+nav a:nth-child(1):hover h1 {
+    -webkit-text-stroke: 8px #cee7fb;
+}
+nav a:nth-child(2) {
+    background-color:#ffe877;
+    border:5px solid #f8ae54;
+    animation-delay: 1s
+}
+nav a:nth-child(2) h1 {
+    color:#ed8147;
+    -webkit-text-stroke: 5px #ffef9f;
+}
+nav a:nth-child(2):hover h1 {
+    -webkit-text-stroke: 8px #fff8b9;
+}
+nav a:nth-child(3) {
+    background-color:#b0ff77;
+    border:5px solid #3cdf83;
+    animation-delay: 1.5s
+}
+nav a:nth-child(3) h1 {
+    color:#3cdf83;
+    -webkit-text-stroke: 5px #c7ffa0;
+}
+nav a:nth-child(3):hover h1 {
+    -webkit-text-stroke: 8px #ddffc5;
+}
+nav a:nth-child(4) {
+    background-color:#fe88bb;
+    border:5px solid #ed478c;
+    animation-delay: 2s
+}
+nav a:nth-child(4) h1 {
+    color:#ed478c;
+    -webkit-text-stroke: 5px #ffa1ca;
+}
+nav a:nth-child(4):hover h1 {
+    -webkit-text-stroke: 8px #ffc1dc;
+}
+nav a:hover {
+    outline:2px solid white
+}
+
+/*section; welcome*/
+section {
+    background-color: #f0e8d3;
+    border:5px solid #624e4a;
+    border-radius:20px;
+    color:#363130
+}
+
+/*aside ; img*/ 
+aside {
+    background-color:#fc9c5c
+
+}
