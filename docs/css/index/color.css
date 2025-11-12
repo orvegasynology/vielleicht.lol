@@ -20,7 +20,8 @@ body {
 nav a:nth-child(1) {
     background-color:#98cdf3;
     border:5px solid #4c72c3;
-    animation-delay: 0.5s
+    animation-delay: 0.5s;
+    background-image:url(/docs/assets/index/about-button.png);
 }
 nav a:nth-child(1) h1 {
     color:#4c72c3;

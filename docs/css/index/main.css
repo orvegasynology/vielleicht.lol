@@ -39,7 +39,9 @@ nav a {
     width:180px;
     position:relative;
     transition:0.2s margin-top;
-    border-radius:2px
+    border-radius:2px;
+    background-size:130%;
+    background-position: center;
 }
 nav a h1 {
     position:absolute;
