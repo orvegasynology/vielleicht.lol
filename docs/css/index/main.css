@@ -95,6 +95,10 @@ aside {
     height:500px;
 
 }
+.updates {
+    border:5px solid black;
+    height:300px
+}
 footer {
     grid-area:footer;
     text-align:center;

@@ -1,0 +1,30 @@
+body {
+    background-color: #1d0b2e;
+    background-image:  repeating-linear-gradient(45deg, #230e33 25%, transparent 25%, transparent 75%, #230e33 75%, #230e33), repeating-linear-gradient(45deg, #230e33 25%, #1d0b2e 25%, #1d0b2e 75%, #230e33 75%, #230e33);
+    background-position: 0 0, 40px 40px;
+    background-size: 80px 80px;
+}
+.tooltip {
+    outline: #f0e8d3 solid 3px;
+    border:3px solid #624e4a;
+    background-color: #f0e8d3;
+    color: #624e4a;
+    box-shadow:4px 4px #f78b50;
+    border-radius:3px;
+}
+main {
+    background-color:#230e33;
+    border:5px solid #1d0b2e;
+    outline:2px solid #140720
+}
+section {
+    background-color: #2b113e;
+    color:#ff9d00;
+    text-shadow: 2px 2px #230e33;
+}
+h1 {
+    color:#ff7300
+}
+p:hover {
+    color:gold
+}

@@ -8,12 +8,18 @@ body {
     color:#624e4a;
 }
 main {
-    padding:20px;
+    padding:30px;
     padding-top:0
 }
 h3 {
     font-size:24px;
-    font-weight:600
+    font-weight:600;
+    padding:3px;
+    background-color:#ff9c56;
+    color:#f0e8d3;
+    position:fixed;
+    top:0px;
+    width:100%
 }
 
 hr {
