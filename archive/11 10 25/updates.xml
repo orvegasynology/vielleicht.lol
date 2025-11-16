@@ -1,0 +1,14 @@
+<rss version="2.0">
+    <channel>
+        <title>Vielleicht</title>
+        <description>Vielleicht's Updates</description>
+        <link>https://vielleicht.lol</link>
+        <item>
+            <title>Test</title>
+            <description>Test. ok yay this works. thanks!</description>
+            <link>https://vielleicht.lol</link>
+            <guid>test</guid>
+            <pubDate>Thu 16 Oct 2025, 11:17:00 -0500</pubDate>
+        </item>
+    </channel>
+</rss>

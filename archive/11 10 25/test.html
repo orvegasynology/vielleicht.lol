@@ -1,0 +1,120 @@
+<!--
+    CC - BY / NC / SA 
+    ※ Do what you want. Do not monetize my code nor your edits. Credit me accordingly.
+    ※ Any edits should have the same license.
+    ※ Also??? Please don't impersonate me lol
+    
+    ※ I do not respect html in any form. A lot of this is unoptimized. Be weary. 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>What is a vielleicht?</title>
+</head>
+<body>
+    <div class="container">
+
+        <div class="box">
+            <nav>
+                <ul href="#top">
+                    <li class="show-big"><button></button></li>
+                    <li><a href="#"><button>nfo</button></a></li>
+                    <li><a href="#"><button>who</button></a></li>
+                    <li><a href="#"><button>snip</button></a></li>
+                    <li><a href="#"><button>'nal</button></a></li>
+                    <li><a href="#"><button>contact</button></a></li>
+                    <li class="show-big"><button></button></li>
+                    <br><li class="show-big"><button>theme<br><input type="color" id="colorPicker" value="#42e5e5" />
+                    </button><br>
+                                <button id="resetButton"><i class="fa-solid fa-rotate-right" ></i></button>
+                            </li>                    
+                </ul>
+            </nav>
+            <h1 class="header">Vielleicht</h1>
+            <hr class="hide-small">
+            <h2>nfo</h2>
+            <hr>
+            <main>
+                <script src="script/personal/colorpicker.js">
+                </script>
+                <p>Hello. I'm Mr Frog. This is my show. I eat the bug. I ate the bug. This is the end. I love you.</p>
+                <p>Welcome to Vielleicht. This is just something I made to seperate my artwork from. Uhh.
+                    Professionalism. Where I display my. uhh. other. projects. Umm. Okay.</p>
+                <br class="hide-small">
+                <div class="mobile">
+                    <p>Hello! It seems that you are on a fairly small resolution <small><i>(or just have your window
+                                sized weirdly. weirdo.)</i></small> While this website is functional on smaller devices,
+                        due to the sheer amount of easter eggs and fun things, i recommend a larger device, mmkay?</p>
+                </div>
+                <br>
+                <p>※ Here's a rundown of the garbage you see <span id="it"></span>.</p>
+                <script>
+                    function updateText() {
+                        const textElement = document.getElementById('it');
+                        if (window.innerWidth > 600) {
+                            textElement.textContent = 'on the sidebar';
+                        } else {
+                            textElement.textContent = 'down there';
+                        }
+                    }
+
+                    window.addEventListener('resize', updateText);
+                    window.addEventListener('load', updateText);
+                </script>
+                <br>
+                <table>
+                    <tr>
+                        <td><b>NFO</b><br><i>info.</i></td>
+                        <td>I'm gonna hold your hand when I say this... You're here.</td>
+                    </tr>
+                    <tr>
+                        <td><b>WHO</b><br>
+                            <i>what?</i>
+                        </td>
+                        <td>A little bio. Nothing more</td>
+                    </tr>
+                    <tr>
+                        <td><b>SNIP</b><br>
+                            <i>Snippets</i>
+                        </td>
+                        <td>Snippets of code I have made for various languages, and how to use them.</td>
+                    </tr>
+                    <tr>
+                        <td><b>'NAL</b><br>
+                            <i>Journal</i>
+                        </td>
+                        <td>Web journal. Obviously i wont trauma dump here but think of it as a development log.</td>
+                    </tr>
+                    <td><b>CONTACT</b><br>
+                        <i>Elaborate.</i>
+                    </td>
+                    <td><a href="https://www.youtube.com/watch?v=yhcoumnkzCM">Why the hell a hundred thousand in my
+                            backpack?</a></td>
+                    </tr>
+                    <tr>
+                        <td><b>NEW</b><br><i>updates.</i></td>
+                        <td>Click here to see updates. You can also subscribe to my RSS feed, neocities profile, or
+                            follow me on nekoweb. </td>
+                    </tr>
+                </table>
+            </main>
+            <footer>
+                <hr>
+                <p>※ Orvegasynology is a <a href="https://justinjackson.ca/webmaster/">fucking webmaster</a>. <br>&copy;
+                    2025 -
+                    部屋が犬の手術の匂いになるまで.</p>
+                <p><small>※ This website is hosted by <a href="https://nekoweb.org">Nekoweb.org</a> and is mirrored on
+                        <a href="https://orvegasynology.neocities.org">Neocities</a> and <a href="#">Github</a>.</small>
+                </p>
+                <img src="images/by-nc-sa.png" style="width:88px;height:31px">
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

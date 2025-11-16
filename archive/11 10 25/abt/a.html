@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>“Am I figured out? Is this all I'll ever be?”</title>
+    <link rel="stylesheet" href="../css/default.css">
+    <link rel="stylesheet" href="../css/abt.css">
+    <script src="https://kit.fontawesome.com/08a9b18601.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="card">
+        <div class="card-content">
+            <script>
+            </script>
+            <h1>ahhh. im so emo. and edgy. ahhhh. fear me.</h1>
+            <hr>
+            <div class="info">
+                <div class="marquee-container active">
+                    <div class="marquee-content">
+                        <p>I have something to say</p>
+                        <p>So shut the fuck up and listen.</p>
+                        <br>
+                        <br>
+                        <p>I spent thirteen years half-cut to my eyeballs.</p>
+                        <p>Drunk, to put it mildly.</p>
+                        <p>Then suddenly I saw it, a streetlight shining in my face.</p>
+                        <p>500 Gigawatts of the power of God.</p>
+                        <p>A vision of my bloated body found in some ditch.</p>
+                        <p>Scared me straight.</p>
+                        <br>
+                        <p>So I got a collar shirt, mortgage and a credit card.</p>
+                        <p>All the things that make a good man.</p>
+                        <p>I hoped I could raise my children to be better than their old man.</p>
+                        <br>
+                        <p>I wanted to believe I was never one setback away from my worst self.</p>
+                        <p>But the truth is.</p>
+                        <br>
+                        <p>Discipline.</p>
+                        <br>
+                        <p>Drive.</p>
+                        <br>
+                        <p>Routine.</p>
+                        <br>
+                        <p>The endless fucking desperation to get shit done.</p>
+                        <br>
+                        <p>A loving wife? Great kids?</p>
+                        <br>
+                        <p>Sobriety?</p>
+                        <br>
+                        <p>I’m telling you.</p>
+                        <br><br><br>
+                        <p><i>You.</i></p>
+                        <br>
+                        <p>Accomplishments I’d been chasing all my life.</p>
+                        <p>Never felt as good as I expected when I crossed the finish line.</p>
+                        <p>…</p>
+                        <p>So now that we’re at the end. Takin’ inventory.</p>
+                        <p>Those nights spinning out of my head, sinking into the sofa.</p>
+                        <p>Broken glass in my palms. Bleeding dry the funniest thing ever.</p>
+                        <p>Old dogs laughing and snarling on a waterbed floor, mocking the moon for daring to show its
+                            face.</p>
+                        <p>All nausea and wreckage and vomit and ugly cruelty.</p>
+                        <p>The only problem in the world an empty bottle.</p>
+                        <p>Those were the best days of my life.</p>
+                        <br><br>
+                        <p>Yeah.</p>
+                        <br><br>
+                        <p>…Those were the best days of my life.</p>
+                        <br>
+                        <p>I got nothing to hide. Ready to face the music.</p>
+                        <p>I can see myself for what I am.</p>
+                        <p>But you? A cowardly, selfish motherfucker and you can’t even see it.</p>
+                        <br><br><br>
+                        <p>…I should’ve been able to protect the kid.</p>
+                        <p>If I could have done one thing right, I wish it had been to give him one small chance off
+                            this goddamned
+                            rock. </p>
+                    </div>
+                </div>
+                <div class="real">
+                    <audio src="etc/08. Inside the Deku Tree.mp3" autoplay controls loop></audio>
+                    <p>ok so heres a tldr.</p><br>
+                    <p>basically. something something year old man-bear-pig living in southern murica. spends 15 hours a
+                        day at the computer coding and playing roblox. composes music on the side. makes <a
+                            href="https://instagram.com/orvegasynology">cartoons</a> on the side. when it is not at the
+                        computer it is resting due to chronic illness and back-pain.</p>
+                    <p> do not suggest the back-pain is from sitting at the computer all day. it is already known.</p>
+                    <p>enjoys bird watching and talking about dithering images.</p>
+                    <p>I actually like lots of things... psychology, anatomy, biology... but i dont wish to pursue a
+                        career or further education on these because im lazy.</p>
+                    <p>would have rainbow honor cords on its graduation cap.</p>
+                    <p>Last thing it has listened to is <a href="https://www.last.fm/user/tsumihq"><span
+                                id="song"></span> by <span id="artist"></span></a> <small><a
+                                href="https://bozocorner.neocities.org"
+                                title="Widget made by bozocorner and powered by biancarosa.">(?)</a></small></p>
+                    <p>i lowkey do not gaf about this page bye</p>
+                </div>
+            </div>
+            <script type="text/javascript">
+                // Replace the username in this url with your last.fm useername
+                const URL = 'https://lastfm-last-played.biancarosa.com.br/tsumihq/latest-song'
+                let art = document.querySelector('#cover-art');
+                let artist = document.querySelector('#artist');
+                let song = document.querySelector('#song');
+                let timestamp = document.querySelector('#timestamp');
+
+                const getTrack = async () => {
+                    const request = await fetch(URL);
+                    const json = await request.json();
+                    let isPlaying = json.track['@attr']?.nowplaying || false;
+                    song.innerHTML = json['track']['name'] + '<br>';
+                    artist.innerHTML = json['track']['artist']['#text'] + '<br>';
+                    album.innerHTML = json['track']['album']['#text'] + '<br>';
+                    art.style.content = `url(${json.track.image[2]['#text']})`;
+                    animateText(song);
+                    animateText(artist);
+
+                    if (isPlaying) {
+                        timestamp.innerHTML = 'Listening to!';
+                    } else {
+                        let time = new Date(json['track']['date']['uts'] * 1000);
+                        let options = {
+                            month: "numeric",
+                            day: "numeric",
+                            year: "2-digit",
+                            hour: 'numeric',
+                            minute: '2-digit'
+                        };
+                        timestamp.innerHTML = 'Listened on ' + time.toLocaleString([], options);
+                    }
+                }
+                setInterval(() => {
+                    getTrack();
+                }, 10000);
+                getTrack();
+
+            </script>
+
+            <hr>
+            <div class="hi">
+                            <button id="vrai">real manifesto</button>
+            <button id="faux">fake manifesto</button>
+            <small title="cool card thing courtesy of this pen. converted to pure javascript by me. "><a href="https://codepen.io/ariona/pen/JopOOr">!!!</a></small>
+
+            </div>
+        </div>
+    </div>
+    <script>
+        // courtesy of https://codepen.io/ariona/pen/JopOOr . converted to pure javascript by me
+        var card = document.querySelectorAll('.card');
+
+        document.addEventListener("mousemove", function (e) {
+            var ax = -((window.innerWidth / 2) - e.pageX) / 20;
+            var ay = ((window.innerHeight / 2) - e.pageY) / 10;
+            card.forEach(function (element) {
+                element.style.transform = "rotateY(" + ax + "deg) rotateX(" + ay + "deg)";
+                element.style.webkitTransform = "rotateY(" + ax + "deg) rotateX(" + ay + "deg)";
+                element.style.mozTransform = "rotateY(" + ax + "deg) rotateX(" + ay + "deg)";
+            });
+        });    </script>
+
+    <script>
+        document.getElementById('faux').addEventListener('click', function () {
+            document.querySelector('.marquee-container').classList.add('active');
+            document.querySelector('.real').classList.remove('active');
+        });
+
+        document.getElementById('vrai').addEventListener('click', function () {
+            document.querySelector('.real').classList.add('active');
+            document.querySelector('.marquee-container').classList.remove('active');
+        });
+    </script>
+</body>
+
+</html>
