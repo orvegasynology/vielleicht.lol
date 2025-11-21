@@ -1,72 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <!--Metadata-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="/assets/favicon.png">
-    <meta name="description" content="Maybe, perhaps, everything, everywhere, all at once.">
-    <title>vielleicht | home</title>
-
-    <!--Styles-->
+    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/default.css">
-    <link rel="stylesheet" href="css/index/main.css">
-    <!--<link rel="stylesheet" href="css/index/animation.css">-->
-    <link rel="stylesheet" href="css/index/color.css">
-
-    <!--Scripts-->
-    <script src="https://kit.fontawesome.com/08a9b18601.js" crossorigin="anonymous"></script>
-    <script src="scripts/tooltip.js"></script>
+    <title>ヴィエライヒト | home</title>
 </head>
 
 <body>
+
+    <script>
+    const header = document.getElementById('header');
+
+header.innerHTML = header.textContent
+  .split('')
+  .map(char => `<span>${char}</span>`)
+  .join('');
+
+const letters = header.querySelectorAll('span');
+
+function jitter() {
+  letters.forEach(letter => {
+    const x = (Math.random() - 0.5) * 2;
+    const y = (Math.random() - 0.5) * 3;
+    letter.style.transform = `translate(${x}px, ${y}px)`;
+  });
+}
+
+setInterval(jitter, 5);
+</script>
+<h1>
+    ヴィエライヒト
+</h1>
+
     <div id="container">
-        <nav>
-            <a href="" onmouseover="Tip(event, 'About the creator of this webbed site.')" onmouseout="UnTip()">
-                <div class="abt">
-                    <h1>about</h1>
-                </div>
-            </a>
-            <a href="" onmouseover="Tip(event, 'Ramblings about life and other things.')" onmouseout="UnTip()">
-                <div class="blog">
-                    <h1>blog</h1>
-                </div>
-            </a>
-            <a href="" onmouseover="Tip(event, 'Comics relating to the creator.')" onmouseout="UnTip()">
-                <div class="comics">
-                    <h1>comics</h1>
-                </div>
-            </a>
-            <a href="" onmouseover="Tip(event, 'My portfolio.')" onmouseout="UnTip()">
-                <div class="folio">
-                    <h1>por'folio</h1>
-                </div>
-            </a>
-        </nav>
-        <section>
-            <div class="section">
-                <h2>Welcome</h2>
-                <p>This website serves as a space to catalog my content that is most <i>personal</i> to <mark>me</mark>.
-                </p>
-                <p>Enjoy your stay! :D</p><br>
-                <p class="hint">Hint: <span id="hint"></span></p>
-                <script src="scripts/index/hints.js"></script>
-                <div class="img"></div>
-            </div>
-        </section>
-        <aside>
-            <img class="aside" src="test.png">
-            <iframe src="updates.html" class="updates"></iframe>
-        </aside>
-        <footer>
-            <hr>
-            &copy; orvegasynology 2025 - til i get bored<br>
-            <a href="">sitemap</a>
-            <a href="">guestbook</a>
-            <a href="">rss</a>
-            <a href="">affiliated projects</a>
-        </footer>
+        <div id="buttonContainer">
+            <a href="#"><button class="button">test</button></a>
+            <a href="#"><button class="button">test</button></a>
+            <a href="#"><button class="button">test</button></a>
+            <a href="#"><button class="button">test</button></a>
+            <a href="#"><button class="button">test</button></a>
+            <a href="#"><button class="button">test</button></a>
+            <a href="#"><button class="button">test</button></a>
+        </div>
     </div>
+
+
+    <script src="scripts/circles.js">
+    </script>
+
 </body>
 
 </html>
