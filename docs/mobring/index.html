@@ -127,26 +127,22 @@
                     </thead>
                     <script>
                         //insipred by https://dokode.moe/pokering
-                        fetch('ring/members.json')
-                            .then(r => r.json())
-                            .then(members => {
-                                const out = document.getElementById('data-output');
-                                out.innerHTML = "";
+                        const out = document.getElementById('data-output');
+                        out.innerHTML = "";
 
-                                members.forEach(m => {
-                                    const row = document.createElement('tr');
-                                    row.innerHTML = `
-                    <td>
-                        ${m.name} @ 
-                        <a href="${m.url}" target="_blank">${m.websiteName}</a><br>
-                        <img src="${m.buttonUrl}" alt="${m.name} button" style="width:88px;height:31px"><br>
-                        joined ${m.date}
-                    </td>
-                    <td>${m.favs}</td>
-                `;
-                                    out.appendChild(row);
-                                });
-                            });
+                        siteData.forEach(m => {
+                            const row = document.createElement('tr');
+                            row.innerHTML = `
+        <td>
+            ${m.name} @ 
+            <a href="${m.url}" target="_blank">${m.websiteName}</a><br>
+            <img src="${m.buttonUrl}" alt="${m.name} button" style="width:88px;height:31px"><br>
+            joined ${m.date}
+        </td>
+        <td>${m.favs}</td>
+    `;
+                            out.appendChild(row);
+                        });
                     </script>
                     <tbody id="data-output">
                     </tbody>
