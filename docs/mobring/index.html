@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--metadata-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.png">
+    <meta name=title content="ヴィエライヒト | home">
+    <meta name=description content="Maybe everything all at once">
+    <meta property=og:type content=website>
+    <meta property=og:title content="ヴィエライヒト | home">
+    <meta property=og:description content="Maybe everything all at once">
+    <meta property=twitter:title content="ヴィエライヒト | home">
+    <meta property=twitter:description content="Maybe everything all at once">
+    <title>ヴィエライヒト | モブRING </title>
+
+    <!--scripts-->
+    <script>
+        window.addEventListener("load", () => {
+            const loader = document.getElementById("loading");
+            loader.classList.add("hide");
+
+            setTimeout(() => loader.remove(), 600);
+        });
+    </script>
+
+    <!--styles-->
+    <link rel="stylesheet" href="../css/default.css">
+    <link rel="stylesheet" href="../css/mobring.css">
+</head>
+
+<body>
+    <div id="container">
+        <main>
+            <header>
+                <h1><span class="jp">サイコヘルメト</span> WEBRING</h1>
+            </header>
+            <section>
+                <h2>WHAT IS THIS?</h2>
+                <br>
+                <p>
+                    The Psycho Helmet webring is for fans of the series Mob Psycho 100, as well as followers of Lord
+                    Psycho Helmet!</p>
+                <br>
+                <p>If you come across this page not knowing what mob psycho 100 is... Watch it. now. now. now.now.now.
+                    Its really good. I promise!</p>
+                <br>
+                <img src="../assets/mobring/checkers.gif" class="checker">
+                <br>
+                <br>
+                <h2>HOW CAN I JOIN?</h2>
+                <br>
+                <p>It's real simple. You just gotta follow these rules.</p>
+                <ol>
+                    <li>You must be a fan of Mob psycho 100. duh.</li>
+                    <li>You must have a website thats hand-coded. No carrds or strawpages or anythin'.</li>
+                    <li><b>Websites with <u>Explicit adult content</u> are not allowed.</b></li>
+                    <li>No bigots.</li>
+                </ol>
+                <p>Shoot me an email at <a href="mailto:ihavelostmyedge@proton.me">Ihavelostmyedge(at)proton(dot)me</a>
+                    with <u>Psycho Helmet Webring</u> or somethin' similar to that in the subject. From there, Please
+                    include your site URL, display name, button <small>(optional; please refrain from using highly
+                        flashing buttons.)</small>, and your favorite MP100
+                    character<small>(s)</small>.</p>
+                <p>I'll try to reply to your application within a week. In the meantime, please add one of these widgets
+                    to your homepage or somewhere accessible. </p>
+                <br>
+                <img src="../assets/mobring/checkers.gif" class="checker">
+                <br>
+                <br>
+                <h2>WIDGETS</h2>
+                <br>
+                <p><small>* These were all made courtesy of the original creator of the Psycho helmet webring. thanks.
+                        mwahhh!</small></p>
+                <br>
+                <div class="flex">
+                    <div>
+                        <p> So far, there are five widgets to choose from. when putting the code on your site replace
+                            "onionring-widget" with any of the following.
+                        </p>
+                        <hr>
+                        <div>
+                            <p>"basic-widget"</p>
+                            <img src="../assets/mobring/ex_1.png">
+                            <p>"small-widget" (transparent)</p>
+                            <img src="../assets/mobring/ex_2.png">
+                            <p>"dimple-widget" (transparent)</p>
+                            <img src="../assets/mobring/ex_3.png">
+                            <p>"mob-widget"</p>
+                            <img src="../assets/mobring/ex_4.png">
+                            <p>"puter-widget"</p>
+                            <img src="../assets/mobring/ex_5.png">
+                            <br>
+                            <small>** if youd like to make a widget to share let me know PLEAASE PLEASE PLEASE THATD BE
+                                SO AWEOSEM. or your can make your own for yer website. hopefully you know what yer
+                                doin'.</small>
+                        </div>
+                    </div>
+                    <div>
+                        <p>Copy and paste this code:</p>
+
+                        <textarea>
+                            <div id="mobring">
+									<script type="text/javascript" src="https://viellleicht.lol/mobring/ring/onionring-variables.js"></script>
+									<script type="text/javascript" src="https://vielleicht.lol/mobring/ring/onionring-widget.js"></script>
+							</div>
+                        </textarea>
+                        <hr>
+
+                        <p>Include this stylesheet, too:</p>
+                        <textarea>
+                            <link rel="stylesheet" href="https://vielleicht.lol/mobring/ring/onionring.css">
+                        </textarea>
+                    </div>
+                </div>
+                <img src="../assets/mobring/checkers.gif" class="checker">
+            </section>
+            <article>
+                <h2>MEMBERS</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name </th>
+                            <th>Favorite Character(s)</th>
+                        </tr>
+                    </thead>
+                    <script>
+                        //insipred by https://dokode.moe/pokering
+                        fetch('ring/members.json')
+                            .then(response => response.json())
+                            .then(members => {
+                                const out = document.getElementById('data-output');
+                                out.innerHTML = "";
+
+                                members.forEach(m => {
+                                    const row = document.createElement('tr');
+                                    row.innerHTML = `
+                <td>
+                    ${m.name} @ <a href="${m.url}" target="_blank">${m.websiteName}<br>
+                    <img src="${m.buttonUrl}" alt="${m.name} button" style="width:88px;height:31px"></a><br>
+                    joined ${m.date}
+                </td>
+                <td>${m.favs}</td>
+            `;
+                                    out.appendChild(row);
+                                });
+                            });
+                    </script>
+                    <tbody id="data-output">
+                    </tbody>
+                </table>
+            </article>
+            <footer>
+                                <img src="../assets/mobring/checkers.gif" class="checker">
+
+                &copy; orvegasynology 2025 - reigens death. not associated with ONE. copyright violation not intended.
+            </footer>
+        </main>
+    </div>
+</body>

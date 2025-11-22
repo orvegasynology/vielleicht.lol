@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+25&display=swap');
+
+:root {
+    --container:500px;
+    --main:#ff00a6
+}
+body {
+    background-color: #111111;
+    background-image:url(../assets/mobring/dark-dot.png)
+}
+main {
+    display:grid;
+    border:2px solid black;
+    padding:5px;
+    grid-template-areas:
+    "header"
+    "section"
+    "article"
+    "footer";
+    gap:5px;
+    background-color: #d6d6d6;
+    outline:2px solid #d6d6d6;
+    transition:0.2s;
+}
+main:hover {
+    border:2px solid var(--main);
+}
+
+
+header,section,article,footer {
+}
+header {
+    grid-area: header;
+    background-image:url(../assets/mobring/mp100analoghorror.png);
+    height:200px;
+    position: relative;
+
+}
+header h1 {
+    font-family:"Jersey 25";
+    color:var(--main);
+    text-shadow: 3px 3px black;
+    position: absolute;
+    bottom:0;
+    right:0;
+    font-weight: normal;
+    transition:0.2s;
+    right:-5px
+}
+main:hover header h1 {
+    color:cyan;
+    animation:float 0.3s ;
+    letter-spacing: 2px;
+    rotate:2deg
+}
+@keyframes float{
+    0%, 100% {bottom:0px}
+    20% {
+        bottom:-5px
+    }
+}
+.checker {
+    width:100%;
+    filter: invert(20%);
+    transition:1s;
+    border:1px solid black
+}
+main:hover .checker {
+    filter:invert(0%)
+}
+header .jp {
+    font-weight:bold
+}
+section {
+    grid-area:section
+}
+h2 {
+    font-family:stingray;
+    background-image: linear-gradient(to left, transparent, var(--main));
+    color:white;
+    padding-left:5px;
+    text-shadow: 1.5px 1.5px #222222;
+    font-size:30px;
+}
+p {
+    font-family:stingray;
+    font-size:19px;
+    color:#222222
+}
+ p:nth-child(1):hover h2:nth-child(1){
+    color:yellow
+}
+.flex {
+    margin:10px;
+    gap:30px;
+}
+.flex div:first-of-type {
+    width:60%
+}
+.flex div:first-of-type p:first-of-type {
+    text-align: center;
+    font-size:15px;
+}
+.flex div:first-of-type div {
+    height:217px;
+    width:200px;
+    overflow: auto;
+    text-align: center;
+    background-color: #9a9a9a;
+    margin-left:auto;
+    margin-right:auto;
+}
+.flex div:first-of-type div img {
+    width:80%;
+}
+.flex div:last-of-type {
+    width:40%;
+}
+.flex div:last-of-type textarea {
+    width:100%;
+    height:100px;
+}
+table {
+    margin-left:auto;
+    margin-right:auto;
+    width:400px;
+    text-align: center;
+}
+table td img {
+    border:1px solid black;
+    width:88px;
+    height:31px;
+}
+table a {
+    text-decoration: none;
+}
+article {
+    grid-area:article
+}
+footer {
+    grid-area:footer;
+}

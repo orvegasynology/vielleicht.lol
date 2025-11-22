@@ -70,3 +70,7 @@ iframe {
     src:url("../font/WebPlus_ToshibaSat_8x14.woff");
     font-family:"toshiba";
 }
+@font-face {
+    font-family:kh-dot;
+    src:url("../font/KH-Dot-Hibiya-32.ttf");
+}
