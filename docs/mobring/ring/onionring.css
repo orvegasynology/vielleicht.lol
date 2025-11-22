@@ -1,0 +1,122 @@
+#mobring #basic {
+    border: 2px solid black;
+    color: black;
+    background: white;
+    width: 180px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: OCR A Std, monospace;
+    font-weight: bold;
+}
+
+#mobring #basic .head {
+    margin-top: 10px;
+    margin-bottom: 0
+}
+
+#mobring #basic img {
+    margin-top: 1px;
+}
+
+#mobring #basic .name {
+    margin-top: 0px;
+}
+
+#mobring #basic a,
+#mobring #small a {
+    color: black;
+    text-decoration: underline;
+}
+
+#mobring #basic a:hover,
+#mobring #small a:hover,
+#mobring #puter a:hover {
+    color: #d52991;
+}
+
+#mobring #s-w p {
+    font-size: 13px;
+    text-align: center;
+    font-family: 'MS Pgothic';
+}
+
+#mobring #small {
+    width: 90px;
+}
+
+#mobring #d-w p {
+    font-size: 13px;
+    text-align: center;
+    font-family: 'MS Pgothic';
+}
+
+#mobring #dimp {
+    width: 90px;
+}
+
+#mobring #mob {
+    border: 2px solid;
+    color: MidnightBlue;
+    width: 245px;
+    height: 140px;
+    background-image: url('https://vielleicht.lol/mobring/assets/mobbg.png');
+    background-size: cover;
+    font-family: Verdana, sans-serif;
+}
+
+
+#mobring #mob #text {
+    width: 180px;
+    margin-left: 80px;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+#mobring #mob #mobring-nav {
+    height: 30px;
+    ;
+    width: 166px;
+    margin-left: 95px;
+    margin-top: 45px;
+    text-align: center;
+    font-size: 11px;
+}
+
+#mobring #mob a {
+    color: MidnightBlue;
+}
+
+#mobring #puter {
+    position: relative;
+    border: 2px solid;
+    width: 210px;
+    height: 180px;
+    background-image: url('https://vielleicht.lol/mobring/assets/computar.jpg');
+    background-size: cover;
+    background-position-y: -10px;
+}
+
+#mobring #puter #text {
+    text-align: center;
+    position: absolute;
+    background: black;
+    border: 1px solid black;
+    color: white;
+    width: 100%;
+    height: 20px;
+    bottom: 0;
+}
+
+#mobring #puter p {
+    font-family: impact, sans-serif;
+    font-size: 26px;
+    margin-top: 60px;
+    margin-left: 2px;
+    text-shadow: 1px 1px 0px white, -1px -1px 0px white, -1px 1px 0px white, 1px -1px 0px white;
+}
+
+#mobring #puter a {
+    color: white;
+}
