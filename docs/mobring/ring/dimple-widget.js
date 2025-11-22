@@ -2,7 +2,7 @@ function loadWebring() {
     var tag = document.getElementById(ringID);
     if (!tag) return;
 
-    var thisSite = window.location.href;
+    var thisSite = window.location.href.replace(/\/$/, ''); // remove trailing slash
     var thisIndex = null;
 
     fetch('https://vielleicht.lol/mobring/ring/members.json')
@@ -11,7 +11,7 @@ function loadWebring() {
             return res.json();
         })
         .then(data => {
-            sites = Array.isArray(data) ? data : data.sites;
+            const sites = data.map(member => member.url.replace(/\/$/, '')); // normalize URLs
 
             for (let i = 0; i < sites.length; i++) {
                 if (thisSite.startsWith(sites[i])) {
@@ -47,6 +47,9 @@ function loadWebring() {
             let prevIndex = (thisIndex - 1 + sites.length) % sites.length;
             let nextIndex = (thisIndex + 1) % sites.length;
 
+            let indexLink = useIndex ? `<a href='${indexPage}'>index</a> | ` : '';
+            let randomLink = useRandom ? `<a href='javascript:void(0)' onclick='randomSite()'>random</a> | ` : '';
+
             tag.innerHTML = `
             <div id="d-w" style="width:90px;text-align:center;">
                 <table id="dimp">
@@ -68,16 +71,8 @@ function loadWebring() {
                         </td>
                     </tr>
                 </table>
-                <p><a href='${indexPage}' target="_top">Psycho Helmet Webring</a></p>
+                <p>${indexLink}${randomLink}<a href='${indexPage}' target="_top">Psycho Helmet Webring</a></p>
             </div>`;
-
-            if (useRandom) {
-                // add random button below the widget
-                const randomBtn = document.createElement('button');
-                randomBtn.textContent = "Random Site";
-                randomBtn.onclick = randomSite;
-                tag.appendChild(randomBtn);
-            }
         })
         .catch(err => {
             console.error("Error loading webring members:", err);
@@ -85,5 +80,5 @@ function loadWebring() {
         });
 }
 
-// Automatically load the webring after page load
+// Wait until DOM is loaded
 window.addEventListener('DOMContentLoaded', loadWebring);
