@@ -24,6 +24,7 @@
             setTimeout(() => loader.remove(), 600);
         });
     </script>
+    <script src="ring/onionring-variables.js"></script>
 
     <!--styles-->
     <link rel="stylesheet" href="../css/default.css">
@@ -101,16 +102,15 @@
                         <p>Copy and paste this code:</p>
 
                         <textarea>
-                            <div id="mobring">
-									<script type="text/javascript" src="https://vielleicht.lol/mobring/ring/onionring-variables.js"></script>
-									<script type="text/javascript" src="https://vielleicht.lol/mobring/ring/onionring-widget.js"></script>
-							</div>
+  <div id="mobring"></div>
+  <script src="https://vielleicht.lol/mobring/ring/onionring-variables.js"></script>
+  <script src="https://vielleicht.lol/mobring/ring/onionring-widget.js"></script>
                         </textarea>
                         <hr>
 
                         <p>Include this stylesheet, too:</p>
                         <textarea>
-                            <link rel="stylesheet" href="https://vielleicht.lol/mobring/ring/onionring.css">
+  <link rel="stylesheet" href="https://vielleicht.lol/mobring/ring/onionring.css">
                         </textarea>
                     </div>
                 </div>
@@ -125,27 +125,28 @@
                             <th>Favorite Character(s)</th>
                         </tr>
                     </thead>
-                    <script>
-                        //insipred by https://dokode.moe/pokering
-                        const out = document.getElementById('data-output');
-                        out.innerHTML = "";
+                    <tbody id="data-output"></tbody>
 
-                        siteData.forEach(m => {
-                            const row = document.createElement('tr');
-                            row.innerHTML = `
-        <td>
-            ${m.name} @ 
-            <a href="${m.url}" target="_blank">${m.websiteName}</a><br>
-            <img src="${m.buttonUrl}" alt="${m.name} button" style="width:88px;height:31px"><br>
-            joined ${m.date}
-        </td>
-        <td>${m.favs}</td>
-    `;
-                            out.appendChild(row);
+                    <script>
+                        window.addEventListener("DOMContentLoaded", () => {
+                            const out = document.getElementById('data-output');
+                            out.innerHTML = "";
+
+                            siteData.forEach(m => {
+                                const row = document.createElement('tr');
+                                row.innerHTML = `
+                <td>
+                    ${m.name} @ 
+                    <a href="${m.url}" target="_blank">${m.websiteName}</a><br>
+                    <img src="${m.buttonUrl}" alt="${m.name} button" style="width:88px;height:31px"><br>
+                    joined ${m.date}
+                </td>
+                <td>${m.favs}</td>
+            `;
+                                out.appendChild(row);
+                            });
                         });
                     </script>
-                    <tbody id="data-output">
-                    </tbody>
                 </table>
             </article>
             <footer>
