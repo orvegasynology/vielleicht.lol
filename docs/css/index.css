@@ -1,23 +1,38 @@
 body {
     background-color: #f12d2d;
 }
-
-#loading {
-    background-color: blue;
+:root {
+    --container: 600px
 }
-
+#loading {
+    background-color: #5f3f98;
+}
+#container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 header {
     display: flex;
     justify-content: center;
     position: relative;
+    margin-top: 0px;
+    rotate: 2deg;
+    margin-bottom:20px
 }
 
 header img {
     position: relative;
     transition: 0.2s;
     filter: drop-shadow(5px 5px black);
+    transition: 0.2s;
+    filter: drop-shadow(5px 5px black);
 }
-
+header img:hover {
+    cursor:pointer;
+    z-index: 99;
+}
 header img:nth-child(even) {
     rotate: 5deg;
 }
@@ -25,54 +40,44 @@ header img:nth-child(even) {
 header img:nth-child(odd) {
     rotate: -5deg;
 }
-header img:hover {
-    scale:1.5
-}
-
-header img {
-    transition: 0.2s;
-    filter: drop-shadow(5px 5px black);
-}
-
-header img:nth-child(even) {
-    rotate: 5deg
-}
-
-header img:nth-child(odd) {
-    rotate: -5deg
-}
-
-:root {
-    --container: 600px
-}
 
 iframe {
     width: 500px;
-    height: 300px;
+    height: 200px;
     margin-left: auto;
     margin-right: auto;
     display: block;
 }
 
 #buttonContainer {
-    height: 300px;
+    height: 200px;
     width: 500px;
     padding-left: 20px
 }
-
+#buttonContainer div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color:white;
+  font-family:"toshiba";
+}
 .button {
     position: absolute;
-    border: 5px double black;
-    border-radius: 10px;
-    padding: 7px;
-    background-color: white;
     transition: 0.2s filter, 0.2s scale;
     filter: drop-shadow(2px);
     width: 100px;
     user-select: none;
     font-family: "toshiba";
     opacity: 0;
-  white-space: nowrap;
+    white-space: nowrap;
+}
+.button, footer p:last-child {
+    border: 5px double black;
+    border-radius: 10px;
+    padding: 7px;
+    background-color: white;
 }
 
 .button:hover {
@@ -92,6 +97,35 @@ iframe {
     will-change: transform;
 }
 
-#header span {
-    display: inline-block;
+ h1 {
+    font-family:acm_vga;
+    font-weight: normal;
+    font-size: 30px;
+}
+p {
+    text-align: center;
+    font-weight:bold;
+    color:white;
+    text-shadow:1px 1px black
+}
+.sloth {
+    margin-bottom:-5px;
+    position:relative;
+    z-index:0;
+}
+footer {
+    margin-top:-90px;
+        pointer-events: none;
+
+}
+footer p:last-child {
+    color:black;
+    text-shadow: none;
+    position: relative;
+    z-index: 1;
+    width:300px;
+    margin-left: auto;
+    margin-right:auto;
+    pointer-events: auto;
+    font-size:13px;
 }
