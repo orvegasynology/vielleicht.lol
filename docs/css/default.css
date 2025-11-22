@@ -31,3 +31,39 @@ iframe {
     margin-left: auto;
     margin-right:auto;
 }
+#loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999999;
+    transition: opacity 0.6s ease; 
+  }
+  #loading.hide {
+    opacity: 0;
+    pointer-events: none;
+  }  
+
+/*fonts*/
+@font-face {
+    src:url("../font/Web437_ACM_VGA_8x16.woff");
+    font-family:"acm_vga"
+}
+@font-face {
+    src:url("../font/Web437_CL_Stingray_8x19.woff");
+    font-family:"stingray";
+    font-weight:normal
+}
+@font-face {
+    src:url("../font/Web437_CL_Stingray_8x19_bold.woff");
+    font-family:"stingray";
+    font-weight: bold;
+}
+@font-face {
+    src:url("../font/WebPlus_ToshibaSat_8x14.woff");
+    font-family:"toshiba";
+}

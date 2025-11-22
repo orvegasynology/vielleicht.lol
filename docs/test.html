@@ -2,54 +2,48 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/default.css">
-    <title>ヴィエライヒト | home</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/default.css">
+  <link rel="stylesheet" href="css/index.css">
+  <title>ヴィエライヒト | home</title>
+    <script src="scripts/block-rain.js"></script>
 </head>
 
 <body>
+  <!-- <div id="loading">
+  </div>-->
+  <script>
+    window.addEventListener("load", () => {
+      const loader = document.getElementById("loading");
+      loader.classList.add("hide");
 
-    <script>
-    const header = document.getElementById('header');
+      setTimeout(() => loader.remove(), 600);
+    });
+  </script>
+  <script src="scripts/thing.js"></script>
 
-header.innerHTML = header.textContent
-  .split('')
-  .map(char => `<span>${char}</span>`)
-  .join('');
-
-const letters = header.querySelectorAll('span');
-
-function jitter() {
-  letters.forEach(letter => {
-    const x = (Math.random() - 0.5) * 2;
-    const y = (Math.random() - 0.5) * 3;
-    letter.style.transform = `translate(${x}px, ${y}px)`;
-  });
-}
-
-setInterval(jitter, 5);
-</script>
-<h1>
-    ヴィエライヒト
-</h1>
-
-    <div id="container">
-        <div id="buttonContainer">
-            <a href="#"><button class="button">test</button></a>
-            <a href="#"><button class="button">test</button></a>
-            <a href="#"><button class="button">test</button></a>
-            <a href="#"><button class="button">test</button></a>
-            <a href="#"><button class="button">test</button></a>
-            <a href="#"><button class="button">test</button></a>
-            <a href="#"><button class="button">test</button></a>
-        </div>
-    </div>
-
-
-    <script src="scripts/circles.js">
-    </script>
+  <div id="container">
+    <header>
+      <img src="assets/logo/bu.png" loading="lazy">
+      <img src="assets/logo/i.png" loading="lazy">
+      <img src="assets/logo/e.png" loading="lazy">
+      <img src="assets/logo/ra.png" loading="lazy">
+      <img src="assets/logo/eye.png" loading="lazy">
+      <img src="assets/logo/hi.png" loading="lazy">
+      <img src="assets/logo/to.png" loading="lazy">
+    </header>
+    <iframe src="navigation.html"></iframe>
+  <footer>
+    <hr>
+    <p>
+      get in touch @ <a href="https://escargot.chat/?r=vielleicht" title="MSN">vielleicht@escargot.chat</a> <a
+        href="https://discordapp.com/users/1435395490790506621">discord</a> <a
+        href="https://bsky.app/profile/vielleicht.lol">bsky</a>
+    </p>
+    <p>&copy; orvegasynology 2025 - til i get bored</p>
+  </footer>
+  </div>
 
 </body>
 
