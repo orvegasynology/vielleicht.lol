@@ -66,7 +66,7 @@ if (tag) {
                         </td>
                         <td class='webring-next'>
                             <a href='${sites[nextIndex]}' target="_top">
-                                <img src="https://vielleicht.lol/mobring/assets/dimp1.png">
+                                <img src="https://vielleicht.lol/mobring/assets/dimp3.png">
                             </a>
                         </td>
                     </tr>
