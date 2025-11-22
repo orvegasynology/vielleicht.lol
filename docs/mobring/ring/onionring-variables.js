@@ -18,6 +18,3 @@ var useIndex = true;
 var indexPage = 'https://vielleicht.lol/mobring';
 
 var useRandom = false;
-
-
-//insipred by https://dokode.moe/pokering
