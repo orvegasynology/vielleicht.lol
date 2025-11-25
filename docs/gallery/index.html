@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--metadata-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.png">
+    <meta name=title content="ヴィエライヒト | home">
+    <meta name=description content="Maybe everything all at once">
+    <meta property=og:type content=website>
+    <meta property=og:title content="ヴィエライヒト | home">
+    <meta property=og:description content="Maybe everything all at once">
+    <meta property=twitter:title content="ヴィエライヒト | home">
+    <meta property=twitter:description content="Maybe everything all at once">
+    <title>ヴィエライヒト | gallery</title>
+    <!--scripts-->
+    <script>
+        window.addEventListener("load", () => {
+            const loader = document.getElementById("loading");
+            loader.classList.add("hide");
+
+            setTimeout(() => loader.remove(), 600);
+        });
+    </script>
+    <!--styles-->
+    <link rel="stylesheet" href="../css/default.css">
+    <link rel="stylesheet" href="../css/gallery.css">
+</head>
+
+<body>
+    <div id="loading"></div>
+    <div id="container">
+        <header>
+            <h1>la galerie</h1>
+        </header>
+        <section class="flex">
+            <div>
+                <img>
+            </div>
+            <div>
+                <p>I like to draw pic tures.</p>
+                <p><strike>But I don't consider myself an artist</strike> Lately ive been trying to get back into the
+                    art thing. And putting more effort into it.</p>
+                <p>You'll find shit I deem safe to share here.</p>
+                <p><b>Specs:</b><br><small> Huion Inspiroy Q11K (really fucked up pen), Clip Studio Paint, sometimes
+                        Adobe Photoshop.</small></p>
+            </div>
+        </section>
+        <aside><img></aside>
+        <main>
+            <h2>art.</h2>
+            <div class="flex">
+                <a data-fslightbox="LB" href="art/curly.png">
+                    <img src="art/thumb/curly.png" alt="curly mouthwash" title="curly moutwahsing. 11/23/25"></a>
+                <a data-fslightbox="LB" href="art/jersey.png">
+                    <img src="art/thumb/jersey.png" alt="jersey" title="my friends inkling, jersey. 11/22/25"></a>
+                <a data-fslightbox="LB" href="art/valk.png">
+                    <img src="art/thumb/valk.png" alt="valkyrie" title="my friends octoling, valkyrie 11/??/25"></a>
+                <a data-fslightbox="LB" href="art/kill.png">
+                    <img src="art/thumb/kill.png" alt="me irl" title="me irl. 10/??/25"></a>
+            </div>
+        </main>
+        <footer>  &copy; orvegasynology 2025 - i get bored. also dont care if you steal my art. no ai.</footer>
+        <script src="../scripts/fs-lightbox.js"></script>
+    </div>
+</body>

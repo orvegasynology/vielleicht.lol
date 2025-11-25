@@ -1,25 +1,29 @@
 body {
     background-color: #f12d2d;
 }
+
 :root {
     --container: 600px
 }
+
 #loading {
     background-color: #5f3f98;
 }
+
 #container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
+
 header {
     display: flex;
     justify-content: center;
     position: relative;
     margin-top: 0px;
     rotate: 2deg;
-    margin-bottom:20px
+    margin-bottom: 20px
 }
 
 header img {
@@ -29,10 +33,12 @@ header img {
     transition: 0.2s;
     filter: drop-shadow(5px 5px black);
 }
+
 header img:hover {
-    cursor:pointer;
+    cursor: pointer;
     z-index: 99;
 }
+
 header img:nth-child(even) {
     rotate: 5deg;
 }
@@ -54,15 +60,7 @@ iframe {
     width: 500px;
     padding-left: 20px
 }
-#buttonContainer div {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color:white;
-  font-family:"toshiba";
-}
+
 .button {
     position: absolute;
     transition: 0.2s filter, 0.2s scale;
@@ -73,7 +71,9 @@ iframe {
     opacity: 0;
     white-space: nowrap;
 }
-.button, footer p:last-child {
+
+.button,
+footer p:last-child {
     border: 5px double black;
     border-radius: 10px;
     padding: 7px;
@@ -97,35 +97,65 @@ iframe {
     will-change: transform;
 }
 
- h1 {
-    font-family:acm_vga;
+h1 {
+    font-family: acm_vga;
     font-weight: normal;
     font-size: 30px;
 }
+
 p {
     text-align: center;
-    font-weight:bold;
-    color:white;
-    text-shadow:1px 1px black
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px black
 }
+
 .sloth {
-    margin-bottom:-5px;
-    position:relative;
-    z-index:0;
+    margin-bottom: -5px;
+    position: relative;
+    z-index: 0;
 }
+
 footer {
-    margin-top:-90px;
-        pointer-events: none;
+    margin-top: -90px;
+    pointer-events: none;
 
 }
+
 footer p:last-child {
-    color:black;
+    color: black;
     text-shadow: none;
     position: relative;
     z-index: 1;
-    width:300px;
+    width: 300px;
     margin-left: auto;
-    margin-right:auto;
+    margin-right: auto;
     pointer-events: auto;
-    font-size:13px;
+    font-size: 13px;
+}
+/*temporary media queries*/
+@media(max-width:600px) {
+    :root {
+        --container: width:100%
+    }
+
+    iframe {
+        scale: 0.9;
+
+    }
+
+    header {
+        scale: 0.7
+    }
+}
+
+@media(max-width:400px) {
+    iframe {
+        scale: 0.8;
+
+    }
+
+    header {
+        scale: 0.6
+    }
 }
