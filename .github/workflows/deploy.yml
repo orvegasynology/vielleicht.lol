@@ -1,26 +1,19 @@
-name: Deploy to Nekoweb
-
 on: [push]
 
 jobs:
-  deploy:
+  test:
     runs-on: ubuntu-latest
     name: deploy2nekoweb
-
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Prepare deploy directory (exclude docs/mobring)
-        run: |
-          mkdir deploydir
-          rsync -av --exclude="mobring" docs/ deploydir/
-
-      - name: Deploy to Nekoweb
+        
+      # your build step here
+        
+      - name: deploy2nekoweb
         uses: indiefellas/deploy2nekoweb@main
         with:
           nekoweb-api-key: ${{ secrets.NEKOWEB_API_KEY }}
-          nekoweb-cookie: ${{ secrets.NEKOWEB_COOKIE }}
-          nekoweb-domain: 'vielleicht.lol'
-          nekoweb-username: 'deploy'
-          directory: 'deploydir'
+          nekoweb-domain: 'vielliecht.lol'
+          nekoweb-username: 'goromi'
+          directory: 'public'
